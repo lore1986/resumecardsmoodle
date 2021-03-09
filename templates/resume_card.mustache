@@ -1,0 +1,58 @@
+<div class="row">
+{{#cardarry}}
+  <div class="col-md-4 col-of-card ">
+    <div class="card card-main h-100">
+      <img src="{{{courseimg}}}" class="card-img-top" alt="image">
+      <div class="card-body ">
+      <div class="row">
+          <div class="col-sm-12">
+            <div class="tit-card-box">
+              <h5 class="card-title tit-card">{{coursecat}}</h5>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-12">
+            <div class="coursenamebox">
+              <a href="{{{courseurl}}}" class="card-text card-title ">{{coursename}}</a>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-12">
+            <div class="coursenamebox">
+              <p class="text text-align-left">{{coursesumm}}</p>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-12">
+          {{#moduleurl}}
+            <div class="classjbox">
+                  <a href="{{moduleurl}}" class="btn btn-primary classj"><i class="fa fa-play" aria-hidden="true"></i> RESUME</a>
+            </div>
+          {{/moduleurl}}
+          {{^moduleurl}}
+            <div class="classjbox">
+                  <a href="{{courseurl}}" class="btn btn-primary classj"><i class="fa fa-play" aria-hidden="true"></i> RESUME</a>
+            </div>
+          {{/moduleurl}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/cardarry}}
+
+{{! <script>
+    var el = null;
+    var el = document.getElementsByClassName('classj');
+    var i;
+    for (i = 0; i < el.length; i++) {
+      
+      if(el[i].href == 'http://localhost/moodle/my/index.php#')
+      {
+        el[i].style.visibility = 'hidden';
+      }
+    } 
+</script> }}

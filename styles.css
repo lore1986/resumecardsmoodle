@@ -1,0 +1,50 @@
+.card-main{
+    background-color: #F7F2ED !important;
+    border-radius: 5px;
+    border: 0 solid grey !important;
+}
+.col-of-card
+{
+    margin-top: 2%;
+}
+
+.card-img-top {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-text{
+    font-family:'Bitter', serif;
+    font-size: 1em;
+    font-weight: 400;
+}
+.tit-card{
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    color:#6c757d;
+}
+
+.tit-card-box{
+    background-color:#E2DAEA;
+    border: none;
+    border-radius: 10px;
+    padding: 7px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: inline-flex;
+}
+.card-title{
+    margin-bottom: 0 !important;
+}
+
+.coursenamebox{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: left;
+}
+.classjbox{
+    align-items: baseline;
+}
+.classj {
+    border-radius: 20px !important;
+}
