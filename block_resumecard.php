@@ -17,8 +17,8 @@
 /**
  * Class definition for the Recently accessed courses block.
  *
- * @package    block_recentlyaccessedcourses
- * @copyright  2018 Victor Deniz <victor@moodle.com>
+ * @package    block_resumecard
+ * @copyright  Lorenzo Gaspari
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -44,33 +44,4 @@ class block_resumecard extends block_base {
         return $this->content;
     }
         
-        /* $this->content->text .= $renderer->time_map_list_link($listitems, $videoattributes); */
-        //print_r($this->config);
-        
-        /* $list= $this->config->timevideo;
-        $listdescriptions= $this->config->description;
-        
-        $listitems = array();
-        $listed = count($list);
-
-        for($x = 0; $x < $listed; $x++){
-            $singlelement = array();
-            $singlelement['time'] = $list[$x];
-            $singlelement['description'] = $listdescriptions[$x];
-
-            $listitems[] = $singlelement;
-        }
-
-        $videourl = $this->config->videourl;
-        $videotitle = $this->config->text;
-        $videoid = $this->config->videoid;
-
-        $videoattributes = array();
-        $videoattributes['url'] = $videourl;
-        $videoattributes['title'] = $videotitle;
-        $videoattributes['idhtml'] = $videoid;
-
-        
- */
-
 }

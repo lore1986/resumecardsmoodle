@@ -15,12 +15,13 @@
     // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
     /**
-     *  Block to navigate a page embedded video.
-     * See: https://github.com/lore1986
+     *  @package    block_resumecard
+        * @copyright  Lorenzo Gaspari
+        * @license    use it as you like
      */
 
 defined('MOODLE_INTERNAL') || die();
-
+use core_completion\progress;
 
 class block_resumecard_renderer extends plugin_renderer_base {
     
@@ -62,7 +63,8 @@ class block_resumecard_renderer extends plugin_renderer_base {
                        }
                        $keysArr[] = array(
                         'courseid' => $courseU->id,
-                        'coursemodule' => $keyIndex
+                        'coursemodule' => $keyIndex,
+						   'progress' => round(progress::get_course_progress_percentage($courseU),0)
                         );
                     }  
                 } 
@@ -81,7 +83,6 @@ class block_resumecard_renderer extends plugin_renderer_base {
 
             if($dataCm['coursemodule'] == null){
                 $linktoResume[] = array(
-                    /* 'moduleurl' => '#', */
                     'courseid' =>$dataCm['courseid'],
                     'courseurl'=> $courseurl,
                     'courseimg' => $courseimage,
@@ -97,11 +98,11 @@ class block_resumecard_renderer extends plugin_renderer_base {
                     'courseurl'=> $courseurl,
                     'courseimg' => $nocoursesurl,
                     'coursename' => $courseRecord->fullname,
-                    'coursecat' => $category->name
+                    'coursecat' => $category->name,
+					'progress' => $dataCm['progress']
                 );
             }elseif($courseimage == null && $dataCm['coursemodule'] == null){
                 $linktoResume[] = array(
-                    /* 'moduleurl' => '#', */
                     'courseid' =>$dataCm['courseid'],
                     'courseimg' => $nocoursesurl,
                     'courseurl'=> $courseurl,
@@ -118,7 +119,8 @@ class block_resumecard_renderer extends plugin_renderer_base {
                     'courseimg' => $courseimage,
                     'courseurl'=> $courseurl,
                     'coursename' => $courseRecord->fullname,
-                    'coursecat' => $category->name
+                    'coursecat' => $category->name,
+					'progress' => $dataCm['progress']
                 );
             }
                   

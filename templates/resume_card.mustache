@@ -1,8 +1,8 @@
 <div class="row">
 {{#cardarry}}
-  <div class="col-md-4 col-of-card ">
+  <div class="col-md-4 mb-2">
     <div class="card card-main h-100">
-      <img src="{{{courseimg}}}" class="card-img-top" alt="image">
+      <img src="{{{courseimg}}}" class="card-img-top-resume" alt="image">
       <div class="card-body ">
       <div class="row">
           <div class="col-sm-12">
@@ -18,14 +18,25 @@
             </div>
           </div>
       </div>
-      <div class="row">
-          <div class="col-sm-12">
-            <div class="coursenamebox">
-              <p class="text text-align-left">{{coursesumm}}</p>
+	  
+      {{#progress}}
+	  <div class="row mb-6">
+        <div class="col-sm-12">
+          <div class="progress bg-white border">
+            <div class="progress-bar bar" role="progressbar" aria-valuenow="{{progress}}" style="width: {{progress}}%" aria-valuemin="0" aria-valuemax="100">
             </div>
           </div>
-      </div>
-      <div class="row">
+          <div class="small p-text">
+            <span class="sr-only"></span><strong>Completed: {{progress}}%</strong>
+          </div>
+        </div>
+		</div>
+      {{/progress}}
+      {{^progress}}
+        
+      {{/progress}}
+      
+      <div class="row mt-3 mb-3" style="position:absolute;bottom:0;">
           <div class="col-sm-12">
           {{#moduleurl}}
             <div class="classjbox">
@@ -43,16 +54,3 @@
     </div>
   </div>
 {{/cardarry}}
-
-{{! <script>
-    var el = null;
-    var el = document.getElementsByClassName('classj');
-    var i;
-    for (i = 0; i < el.length; i++) {
-      
-      if(el[i].href == 'http://localhost/moodle/my/index.php#')
-      {
-        el[i].style.visibility = 'hidden';
-      }
-    } 
-</script> }}

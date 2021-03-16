@@ -1,14 +1,14 @@
 .card-main{
-    background-color: #F7F2ED !important;
+    background-color: #DFE6EF !important;
     border-radius: 5px;
-    border: 0 solid grey !important;
+    border: 0 solid #B8BDC4 !important;
 }
 .col-of-card
 {
     margin-top: 2%;
 }
 
-.card-img-top {
+.card-img-top-resume {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -16,7 +16,7 @@
 .card-text{
     font-family:'Bitter', serif;
     font-size: 1em;
-    font-weight: 400;
+    font-weight: 600;
 }
 .tit-card{
     font-family: 'Inter', sans-serif;
@@ -25,9 +25,9 @@
 }
 
 .tit-card-box{
-    background-color:#E2DAEA;
+    background-color:#DFE6EF;
     border: none;
-    border-radius: 10px;
+    border-radius: 3px;
     padding: 7px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -39,12 +39,29 @@
 
 .coursenamebox{
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: left;
 }
 .classjbox{
     align-items: baseline;
 }
 .classj {
-    border-radius: 20px !important;
+	font-family: 'Inter', sans-serif;
+    font-size: 0.8em;
+	font-weight: 600;
+    border-radius: 10px !important;
+}
+.progress {
+    height: 10px !important;
+}
+.progress-bar {
+    height: 10px;
+	background-color: #31ADB3 !important;
+}
+.p-text {
+	margin-top: -10px;
+	margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    color:#6c757d ;
 }
